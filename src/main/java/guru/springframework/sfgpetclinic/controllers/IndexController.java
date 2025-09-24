@@ -1,13 +1,14 @@
 package guru.springframework.sfgpetclinic.controllers;
 
+import javax.validation.valueextraction.ValueExtractorDeclarationException;
+
 public class IndexController {
 
-    public String index(){
-
+    public String index() {
         return "index";
     }
 
-    public String oupsHandler(){
-        return "notimplemented";
+    public String oopsHandler() {
+        throw new ValueNotFoundException();
     }
 }
